@@ -1,0 +1,24 @@
+{
+  "name": "template-monorepo-ts",
+  "description": "Una plantilla para crear un monorepo de proyectos hechos con TypeScript usando Yarn Workspaces",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Edixon Piña",
+    "email": "edixonalbertto@gmail.com"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "prettier --write ./*.{ts,md,json} ./packages/**/*.{ts,json}",
+    "api": "yarn workspace @edixon/api-monitor-vzla",
+    "bot": "yarn workspace @edixon/bot-monitor-vzla"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
+  }
+}
